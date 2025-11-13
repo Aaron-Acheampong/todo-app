@@ -1,0 +1,14 @@
+.main-div {
+    margin-top: 12px; 
+    display: flex; 
+    width: min(972px, 100%);
+    align-items: center; 
+    justify-content: space-between; 
+    font-size: 11px; 
+    opacity: 0.5;
+}
+
+.copyright {
+    font-size: 11px; 
+    font: inherit;
+}

@@ -1,0 +1,40 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    min-height: 75px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.content {
+    width: 100%;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: rgb(211, 19, 19);
+}
+
+.item-icons-group {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px 15px;
+    font-size: medium;
+}
+
+.item-icons {
+    margin: 5px 15px;
+    font-size: medium;
+    
+}
+
+.delete-icon {
+    color: rgb(206, 93, 93);
+}
+
+.edit-icon {
+    color: rgb(89, 24, 143);
+}
