@@ -8,11 +8,15 @@ import StatusBar from './components/StatusBar'
 import type { TodoType } from './lib/types'
 import { v4 as uuidv4 } from 'uuid'
 import SuspenseLoader from './components/SuspenseLoader'
+import { setItem, getItem } from './lib/utils'
 
  const TodoListLazy = lazy(() => import('./components/TodoList'));
 
 function App() {
-  const [todos, setTodos] = useState<TodoType[]>([])
+  const [todos, setTodos] = useState<TodoType[]>(() => {
+    const item = (getItem("todos") as TodoType[]);
+    return item || [];
+  })
 
  
 
@@ -45,9 +49,11 @@ function App() {
   const toggleComplete = useCallback((id: string) => {
     setTodos(todos.map(todo => todo.id === id ? {...todo, completed: !todo.completed} : todo))
   }, [todos]);
-  
 
-  useEffect(() => {});
+
+  useEffect(() => {
+    setItem('todos', todos);
+  }, [todos]);
 
 
 

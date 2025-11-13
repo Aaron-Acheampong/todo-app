@@ -34,11 +34,11 @@
 }
 
 .background {
-  font-size: 128px;
+  font-size:250px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.05);
   position: absolute;
-  top: 7.5%;
+  top: 17.5%;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
