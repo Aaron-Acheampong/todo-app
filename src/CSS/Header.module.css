@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between; 
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    background-color: rgb(251,245,237); 
+    background-color: rgb(237, 251, 240); 
     height: 45px;
     min-height: 45px;
     padding: 0 28px;
@@ -17,6 +17,6 @@
 }
 
 .counter {
-    color: #231d15;
+    color: #15231a;
     font-size: 18px;
 }

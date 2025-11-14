@@ -18,9 +18,9 @@
 }
 
 .list-main-div::-webkit-scrollbar-track {
-  background: #faf7f3;
+  background: #f3faf6;
 }
 
 .list-main-div::-webkit-scrollbar-thumb {
-  background-color: #f3f1ee;
+  background-color: #eef3ef;
 }
