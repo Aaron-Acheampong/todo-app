@@ -9,6 +9,9 @@ import type { TodoType } from './lib/types'
 import { v4 as uuidv4 } from 'uuid'
 import SuspenseLoader from './components/SuspenseLoader'
 import { setItem, getItem } from './lib/utils'
+import { MAX_FREE_TODOS } from './lib/constants';
+
+import {useKindeAuth} from "@kinde-oss/kinde-auth-react";
 
  const TodoListLazy = lazy(() => import('./components/TodoList'));
 
@@ -18,6 +21,8 @@ function App() {
     return item || [];
   })
 
+  const {  user } = useKindeAuth();
+
  
 
   const todosCompletedPercentage =  useMemo(() => { 
@@ -26,6 +31,10 @@ function App() {
 
 
   const handleAddTodo = useCallback((todoItem: string) => {
+    if (!user && todos.length >= MAX_FREE_TODOS) {
+          alert("Register or  sign in to add more todos");
+          return; 
+      }
     setTodos([...todos, {id: uuidv4(),
         content: todoItem, completed: false, edit: false }]);
   }, [todos])

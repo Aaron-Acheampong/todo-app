@@ -1,6 +1,6 @@
 .main-div {
   font-family: sans-serif;
-  background-color: #b3f1c3;
+  background-color: #f1d4b3;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,6 +15,7 @@
   flex-direction: column; 
   height: 636px; 
   width: 972px; 
+  min-width: 450px;
   font-family: sans-serif;
   /* grid-template-columns: 7fr 4fr; 
   grid-template-rows: 59px 1fr; */
